@@ -1,0 +1,16 @@
+{
+  "name": "UpperVisa - Immigration & Visa Consulting",
+  "short_name": "UpperVisa",
+  "description": "Expert immigration consulting and visa application services with personalized guidance for your global journey.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e53e3e",
+  "icons": [
+    {
+      "src": "/favicon.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    }
+  ]
+}
