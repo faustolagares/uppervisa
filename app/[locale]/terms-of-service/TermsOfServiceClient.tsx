@@ -22,9 +22,13 @@ export default function TermsOfServiceClient({ locale }: { locale: string }) {
         </div>
         <div className="mx-auto px-4 max-w-[1350px] relative z-20">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-medium text-white mb-6">Terms of Service</h1>
+            <h1 className="text-5xl md:text-6xl font-medium text-white mb-6">{t("footer.termsOfService")}</h1>
             <p className="text-xl text-white/90 mb-8">
-              The terms and conditions governing the use of UpperVisa's services
+              {locale === "en-US" 
+                ? "The terms and conditions governing the use of UpperVisa's services"
+                : locale === "pt-BR" 
+                  ? "Os termos e condições que regem o uso dos serviços da UpperVisa"
+                  : "Los términos y condiciones que rigen el uso de los servicios de UpperVisa"}
             </p>
           </div>
         </div>

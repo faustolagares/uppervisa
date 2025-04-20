@@ -22,9 +22,13 @@ export default function PrivacyPolicyClient({ locale }: { locale: string }) {
         </div>
         <div className="mx-auto px-4 max-w-[1350px] relative z-20">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-medium text-white mb-6">Privacy Policy</h1>
+            <h1 className="text-5xl md:text-6xl font-medium text-white mb-6">{t("footer.privacyPolicy")}</h1>
             <p className="text-xl text-white/90 mb-8">
-              How UpperVisa collects, uses, and protects your personal information
+              {locale === "en-US" 
+                ? "How UpperVisa collects, uses, and protects your personal information"
+                : locale === "pt-BR" 
+                  ? "Como a UpperVisa coleta, usa e protege suas informações pessoais"
+                  : "Cómo UpperVisa recopila, utiliza y protege su información personal"}
             </p>
           </div>
         </div>
