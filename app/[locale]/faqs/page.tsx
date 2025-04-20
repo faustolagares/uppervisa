@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
-// Removed unused import: import { useLanguage } from "@/components/language-provider"
+import { useLanguage } from "@/components/language-provider"
 import FAQSearch from "@/components/faq/faq-search"
 import FAQCategories from "@/components/faq/faq-categories"
 import FAQAccordion from "@/components/faq/faq-accordion"
@@ -540,7 +540,7 @@ export default function FAQsPage({
 }: {
   params: { locale: string }
 }) {
-  // Removed unused variable: const { t } = useLanguage()
+  const { t } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [activeCategory, setActiveCategory] = useState("Immigration Visas")
   const categories = Object.keys(faqData)
@@ -575,10 +575,9 @@ export default function FAQsPage({
       {/* Page Header */}
       <div className="bg-gray-900 text-white py-16 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-medium mb-4">Frequently Asked Questions</h1>
+          <h1 className="text-4xl md:text-5xl font-medium mb-4">{t("faqSection.title")}</h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Find answers to common questions about immigration, visas, and our services. If you can't find what you're
-            looking for, feel free to contact us.
+            {t("faqSection.description")}
           </p>
         </div>
       </div>
@@ -614,21 +613,21 @@ export default function FAQsPage({
             {/* Sidebar */}
             <div className="w-full lg:w-1/4">
               <div className="bg-white p-6 rounded-lg border border-gray-200 sticky top-24">
-                <h3 className="text-xl font-medium text-gray-900 mb-4">Still Have Questions?</h3>
-                <p className="text-gray-600 mb-6">
-                  Can't find the answer you're looking for? Please contact our support team for assistance.
-                </p>
+              <h3 className="text-xl font-medium text-gray-900 mb-4">{t("faqSection.contactPrompt")}</h3>
+              <p className="text-gray-600 mb-6">
+                {t("faqSection.contactLink")}
+              </p>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <Mail className="w-5 h-5 text-red-600 mr-3" />
                     <a href="mailto:hello@uppervisa.com" className="text-gray-700 hover:text-red-600">
-                      hello@uppervisa.com
+                      {t("common.emailAddress")}
                     </a>
                   </div>
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-red-600 mr-3" />
                     <a href="tel:+19292805047" className="text-gray-700 hover:text-red-600">
-                      +1 (929) 280-5047
+                      {t("common.phoneNumber")}
                     </a>
                   </div>
                 </div>
@@ -637,7 +636,7 @@ export default function FAQsPage({
                     href={`/${locale}/contact`}
                     className="block w-full bg-red-600 text-white text-center py-3 rounded-md hover:bg-red-700 transition-colors"
                   >
-                    Contact Us
+                    {t("cta.contactUs")}
                   </Link>
                 </div>
               </div>

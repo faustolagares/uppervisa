@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight } from "lucide-react"
-// Removed unused import: import translations from "@/translations"
+import { useLanguage } from "@/components/language-provider"
 
 export const metadata: Metadata = {
   title: "Business Services | UpperVisa",
@@ -15,7 +15,7 @@ export default function BusinessServicesPage({
 }: {
   params: { locale: string }
 }) {
-  // Removed unused variable: const t = ...
+  const { t } = useLanguage()
 
   // Business service categories
   const businessServices = [
@@ -92,10 +92,9 @@ export default function BusinessServicesPage({
       {/* Page Header */}
       <div className="bg-gray-900 text-white py-16 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-medium mb-4">Business Services</h1>
+          <h1 className="text-4xl md:text-5xl font-medium mb-4">{t("businessServices.pageTitle")}</h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Specialized immigration solutions for investors, entrepreneurs, and companies looking to establish or expand
-            their presence in the United States.
+            {t("businessServices.pageDescription")}
           </p>
         </div>
       </div>
@@ -109,7 +108,7 @@ export default function BusinessServicesPage({
               <ol className="inline-flex items-center space-x-1 md:space-x-3">
                 <li className="inline-flex items-center">
                   <Link href={`/${locale}`} className="text-gray-700 hover:text-red-600">
-                    Home
+                    {t("navigation.home")}
                   </Link>
                 </li>
                 <li aria-current="page">
@@ -129,7 +128,7 @@ export default function BusinessServicesPage({
                         d="m1 9 4-4-4-4"
                       />
                     </svg>
-                    <span className="text-gray-500">Business Services</span>
+                    <span className="text-gray-500">{t("businessServices.pageTitle")}</span>
                   </div>
                 </li>
               </ol>
@@ -138,16 +137,12 @@ export default function BusinessServicesPage({
 
           {/* Introduction */}
           <div className="mb-16">
-            <h2 className="text-3xl font-medium text-gray-900 mb-6">Our Business Immigration Services</h2>
+            <h2 className="text-3xl font-medium text-gray-900 mb-6">{t("businessServices.introTitle")}</h2>
             <p className="text-gray-600 mb-8">
-              UpperVisa provides specialized immigration solutions for investors, entrepreneurs, and businesses looking
-              to establish or expand their presence in the United States. Our team of experienced consultants
-              understands the unique challenges and opportunities in business immigration.
+              {t("businessServices.introParagraph1")}
             </p>
             <p className="text-gray-600">
-              From investor visas to corporate transfers and business formation, we offer comprehensive services
-              tailored to your business goals and immigration needs. Our strategic approach ensures compliance with U.S.
-              immigration laws while maximizing your business opportunities.
+              {t("businessServices.introParagraph2")}
             </p>
           </div>
 
@@ -171,7 +166,7 @@ export default function BusinessServicesPage({
                     <p className="text-red-600 italic mb-4">{service.subtitle}</p>
                     <p className="text-gray-600 mb-6">{service.description}</p>
 
-                    <h4 className="text-lg font-medium text-gray-900 mb-4">Our Services Include:</h4>
+                    <h4 className="text-lg font-medium text-gray-900 mb-4">{t("businessServices.servicesInclude")}</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                       {service.services.map((item) => (
                         <li key={item.name}>
@@ -190,7 +185,7 @@ export default function BusinessServicesPage({
                       href={service.link}
                       className="inline-flex items-center bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors"
                     >
-                      Explore {service.title} <ChevronRight className="w-4 h-4 ml-2" />
+                      {t("businessServices.explore")} {service.title} <ChevronRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>
@@ -202,10 +197,9 @@ export default function BusinessServicesPage({
           <div className="mt-16 bg-gray-900 text-white p-8 rounded-lg">
             <div className="md:flex items-center justify-between">
               <div className="mb-6 md:mb-0 md:mr-8">
-                <h3 className="text-2xl font-medium mb-2">Ready to Grow Your Business in the U.S.?</h3>
+                <h3 className="text-2xl font-medium mb-2">{t("businessServices.ctaTitle")}</h3>
                 <p className="text-gray-300">
-                  Contact our team today for a personalized consultation and expert guidance on business immigration
-                  options.
+                  {t("businessServices.ctaDescription")}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -213,13 +207,13 @@ export default function BusinessServicesPage({
                   href={`/${locale}/contact`}
                   className="bg-red-600 text-white px-6 py-3 rounded-md text-center hover:bg-red-700 transition-colors"
                 >
-                  Contact Us
+                  {t("cta.contactUs")}
                 </Link>
                 <Link
                   href={`/${locale}/book-appointment`}
                   className="bg-white text-gray-900 px-6 py-3 rounded-md text-center hover:bg-gray-100 transition-colors"
                 >
-                  Book a Consultation
+                  {t("cta.bookConsultation")}
                 </Link>
               </div>
             </div>

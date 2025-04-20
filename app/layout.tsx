@@ -19,9 +19,29 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "UPPERVISA - Immigration & Visa Consulting",
-  description: "Professional immigration and visa consulting services",
-    generator: 'v0.dev'
+  title: "UpperVisa | Your American Dream Starts Here",
+  description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
+  generator: 'v0.dev',
+  openGraph: {
+    title: "UpperVisa | Your American Dream Starts Here",
+    description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
+    images: [
+      {
+        url: '/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UpperVisa Immigration Consulting',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "UpperVisa | Your American Dream Starts Here",
+    description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
+    images: ['/og.jpg'],
+  }
 }
 
 export const viewport: Viewport = {

@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Check, Star, Shield, Clock, Globe, Zap } from "lucide-react"
-// Removed unused import: import translations from "@/translations"
 
 export const metadata: Metadata = {
   title: "Golden Card Program | UpperVisa",
@@ -11,12 +10,12 @@ export const metadata: Metadata = {
 }
 
 export default function GoldenCardPage({
-  params: { locale },
+  params,
 }: {
   params: { locale: string }
 }) {
-  // Removed unused variable: const t = ...
-
+  const locale = params.locale;
+  
   // Golden Card categories
   const categories = [
     {
@@ -79,7 +78,7 @@ export default function GoldenCardPage({
   ]
 
   return (
-    <div className="flex flex-col min-h-screen" style={{ backgroundColor: "#111113" }}>
+    <div className="flex flex-col min-h-screen bg-[#111113]">
       {/* Hero Section with Parallax Effect */}
       <div className="relative h-[600px] overflow-hidden">
         <div className="absolute inset-0">
@@ -116,7 +115,7 @@ export default function GoldenCardPage({
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Golden Card Program</h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto" style={{ color: "#A0A0A5" }}>
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-[#A0A0A5]">
               An exclusive long-term residency program for exceptional talents, investors, and entrepreneurs seeking to
               establish themselves in the United States.
             </p>
@@ -139,7 +138,7 @@ export default function GoldenCardPage({
       </div>
 
       {/* Main Content */}
-      <div className="py-20" style={{ backgroundColor: "#111113" }}>
+      <div className="py-20 bg-[#111113]">
         <div className="w-full max-w-[1350px] mx-auto px-4">
           {/* Introduction */}
           <div className="mb-20 text-center">
@@ -147,17 +146,17 @@ export default function GoldenCardPage({
               <div className="w-24 h-1 bg-red-600"></div>
             </div>
             <h2 className="text-4xl font-bold text-white mb-8">The Premier U.S. Residency Program</h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: "#68696C" }}>
+            <p className="text-xl max-w-3xl mx-auto text-[#68696C]">
               The Golden Card Program offers an exclusive pathway to long-term U.S. residency for exceptional
               individuals who contribute significantly to the nation's prosperity, innovation, and cultural advancement.
             </p>
           </div>
 
           {/* Key Benefits Section */}
-          <div className="p-10 mb-20 rounded-lg" style={{ backgroundColor: "#121315" }}>
+          <div className="p-10 mb-20 rounded-lg bg-[#121315]">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-white mb-6">Exclusive Benefits</h3>
-              <p className="max-w-2xl mx-auto" style={{ color: "#68696C" }}>
+              <p className="max-w-2xl mx-auto text-[#68696C]">
                 Golden Card holders enjoy a comprehensive package of privileges designed to facilitate seamless
                 integration and exceptional opportunities in the United States.
               </p>
@@ -165,22 +164,20 @@ export default function GoldenCardPage({
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div
-                className="p-8 rounded-lg transform transition-all duration-300 hover:scale-105"
-                style={{ backgroundColor: "#121315" }}
+                className="p-8 rounded-lg transform transition-all duration-300 hover:scale-105 bg-[#121315]"
               >
                 <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">10-Year Residency</h4>
-                <p style={{ color: "#68696C" }}>
+                <p className="text-[#68696C]">
                   Enjoy long-term stability with a 10-year renewable residency permit, eliminating the need for frequent
                   visa renewals.
                 </p>
               </div>
 
               <div
-                className="p-8 rounded-lg transform transition-all duration-300 hover:scale-105"
-                style={{ backgroundColor: "#121315" }}
+                className="p-8 rounded-lg transform transition-all duration-300 hover:scale-105 bg-[#121315]"
               >
                 <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
                   <svg
@@ -202,15 +199,14 @@ export default function GoldenCardPage({
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">Family Inclusion</h4>
-                <p style={{ color: "#68696C" }}>
+                <p className="text-[#68696C]">
                   Extend Golden Card benefits to your spouse and dependent children, ensuring your family stays
                   together.
                 </p>
               </div>
 
               <div
-                className="p-8 rounded-lg transform transition-all duration-300 hover:scale-105"
-                style={{ backgroundColor: "#121315" }}
+                className="p-8 rounded-lg transform transition-all duration-300 hover:scale-105 bg-[#121315]"
               >
                 <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
                   <svg
@@ -230,7 +226,7 @@ export default function GoldenCardPage({
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">Premium Processing</h4>
-                <p style={{ color: "#68696C" }}>
+                <p className="text-[#68696C]">
                   Benefit from expedited application processing and dedicated support throughout your Golden Card
                   journey.
                 </p>
@@ -245,7 +241,7 @@ export default function GoldenCardPage({
                 <div className="w-24 h-1 bg-red-600"></div>
               </div>
               <h3 className="text-4xl font-bold text-white mb-6">Eligibility Categories</h3>
-              <p className="max-w-2xl mx-auto" style={{ color: "#68696C" }}>
+              <p className="max-w-2xl mx-auto text-[#68696C]">
                 The Golden Card Program is designed for exceptional individuals across various fields who demonstrate
                 outstanding achievements and potential contributions to the United States.
               </p>
@@ -253,7 +249,7 @@ export default function GoldenCardPage({
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {categories.map((category) => (
-                <div key={category.id} className="rounded-xl overflow-hidden" style={{ backgroundColor: "#121315" }}>
+                <div key={category.id} className="rounded-xl overflow-hidden bg-[#121315]">
                   <div className="p-8">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
@@ -261,14 +257,14 @@ export default function GoldenCardPage({
                       </div>
                       <h4 className="text-2xl font-bold text-white">{category.title}</h4>
                     </div>
-                    <p className="mb-8" style={{ color: "#68696C" }}>
+                    <p className="mb-8 text-[#68696C]">
                       {category.description}
                     </p>
                     <div className="space-y-3">
                       {category.benefits.map((benefit, index) => (
                         <div key={index} className="flex items-start">
                           <Check className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
-                          <span style={{ color: "#68696C" }}>{benefit}</span>
+                          <span className="text-[#68696C]">{benefit}</span>
                         </div>
                       ))}
                     </div>
@@ -287,10 +283,10 @@ export default function GoldenCardPage({
           </div>
 
           {/* Application Process */}
-          <div className="p-10 mb-20 rounded-lg" style={{ backgroundColor: "#121315" }}>
+          <div className="p-10 mb-20 rounded-lg bg-[#121315]">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-white mb-6">Application Process</h3>
-              <p className="max-w-2xl mx-auto" style={{ color: "#68696C" }}>
+              <p className="max-w-2xl mx-auto text-[#68696C]">
                 Our streamlined application process is designed to be efficient while maintaining the exclusive
                 standards of the Golden Card Program.
               </p>
@@ -304,7 +300,7 @@ export default function GoldenCardPage({
                 <div className="flex flex-col md:flex-row items-center mb-16">
                   <div className="md:w-1/2 md:pr-16 md:text-right mb-8 md:mb-0">
                     <h4 className="text-xl font-bold text-white mb-3">Initial Assessment</h4>
-                    <p style={{ color: "#68696C" }}>
+                    <p className="text-[#68696C]">
                       Our experts evaluate your qualifications and achievements to determine eligibility for the Golden
                       Card Program.
                     </p>
@@ -322,7 +318,7 @@ export default function GoldenCardPage({
                   </div>
                   <div className="md:w-1/2 md:pl-16">
                     <h4 className="text-xl font-bold text-white mb-3">Documentation Preparation</h4>
-                    <p style={{ color: "#68696C" }}>
+                    <p className="text-[#68696C]">
                       We assist in compiling a comprehensive application package that showcases your achievements and
                       contributions.
                     </p>
@@ -332,7 +328,7 @@ export default function GoldenCardPage({
                 <div className="flex flex-col md:flex-row items-center mb-16">
                   <div className="md:w-1/2 md:pr-16 md:text-right mb-8 md:mb-0">
                     <h4 className="text-xl font-bold text-white mb-3">Application Submission</h4>
-                    <p style={{ color: "#68696C" }}>
+                    <p className="text-[#68696C]">
                       Your application is submitted through our premium processing channel for expedited review.
                     </p>
                   </div>
@@ -349,7 +345,7 @@ export default function GoldenCardPage({
                   </div>
                   <div className="md:w-1/2 md:pl-16">
                     <h4 className="text-xl font-bold text-white mb-3">Golden Card Issuance</h4>
-                    <p style={{ color: "#68696C" }}>
+                    <p className="text-[#68696C]">
                       Upon approval, you receive your Golden Card and comprehensive onboarding to maximize your
                       benefits.
                     </p>
@@ -366,13 +362,13 @@ export default function GoldenCardPage({
                 <div className="w-24 h-1 bg-red-600"></div>
               </div>
               <h3 className="text-4xl font-bold text-white mb-6">Success Stories</h3>
-              <p className="max-w-2xl mx-auto" style={{ color: "#68696C" }}>
+              <p className="max-w-2xl mx-auto text-[#68696C]">
                 Hear from individuals who have transformed their lives and careers through the Golden Card Program.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-8 rounded-lg" style={{ backgroundColor: "#121315" }}>
+              <div className="p-8 rounded-lg bg-[#121315]">
                 <div className="flex items-start mb-6">
                   <div className="flex-shrink-0 mr-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
@@ -390,14 +386,14 @@ export default function GoldenCardPage({
                     <p className="text-red-600">Tech Entrepreneur</p>
                   </div>
                 </div>
-                <p className="italic" style={{ color: "#68696C" }}>
+                <p className="italic text-[#68696C]">
                   "The Golden Card Program provided me with the stability and opportunities I needed to scale my tech
                   startup in Silicon Valley. The premium processing and dedicated support made the entire process
                   seamless."
                 </p>
               </div>
 
-              <div className="p-8 rounded-lg" style={{ backgroundColor: "#121315" }}>
+              <div className="p-8 rounded-lg bg-[#121315]">
                 <div className="flex items-start mb-6">
                   <div className="flex-shrink-0 mr-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
@@ -415,7 +411,7 @@ export default function GoldenCardPage({
                     <p className="text-red-600">Medical Researcher</p>
                   </div>
                 </div>
-                <p className="italic" style={{ color: "#68696C" }}>
+                <p className="italic text-[#68696C]">
                   "As a medical researcher, the Golden Card Program has given me unprecedented access to collaborate
                   with leading institutions. The 10-year residency allows me to focus on my groundbreaking work without
                   visa concerns."
@@ -435,8 +431,7 @@ export default function GoldenCardPage({
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href={`/${locale}/contact`}
-                  className="text-white px-8 py-3 rounded-md hover:bg-gray-900 transition-colors"
-                  style={{ backgroundColor: "#111113" }}
+                  className="text-white px-8 py-3 rounded-md hover:bg-gray-900 transition-colors bg-[#111113]"
                 >
                   Apply Now
                 </Link>

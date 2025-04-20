@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, useCallback } from "react"
-import translations from "@/translations"
+import { useLanguage } from "./language-provider"
 import SafeImage from "./safe-image"
 
 export default function HeroSlideshow({ locale }: { locale: string }) {
@@ -13,27 +13,27 @@ export default function HeroSlideshow({ locale }: { locale: string }) {
     }
   }, [])
 
-  const t = translations[locale as keyof typeof translations] || translations["en-US"]
+  const { t } = useLanguage()
 
   // Create slides with proper formatting for each language
   const slides = [
     {
       id: 1,
-      title: t.hero.slide1.title,
+      title: t("hero.slide1.title"),
       image:
         "https://neecplxfgfdludxo.public.blob.vercel-storage.com/UpperVisa/Hero%20Section/UpperVisa%201-U6W5z0wAJACYfQaTtMBhwhllKxJqLF.webp",
       alt: "Immigration consultation meeting",
     },
     {
       id: 2,
-      title: t.hero.slide2.title,
+      title: t("hero.slide2.title"),
       image:
         "https://neecplxfgfdludxo.public.blob.vercel-storage.com/UpperVisa/Hero%20Section/UpperVisa%202-ZjHT0uEnVhYCsvCPCqaev3UEdxcdhR.webp",
       alt: "Passport handover during visa consultation",
     },
     {
       id: 3,
-      title: t.hero.slide3.title,
+      title: t("hero.slide3.title"),
       image:
         "https://neecplxfgfdludxo.public.blob.vercel-storage.com/UpperVisa/Hero%20Section/UpperVisa%203-NTRFspsceIPhkts4jIEDiuR2AAYDF1.webp",
       alt: "Woman traveling on airplane after successful visa application",
@@ -131,13 +131,13 @@ export default function HeroSlideshow({ locale }: { locale: string }) {
             }`}
             style={{ zIndex: currentSlide === index ? 2 : 0 }}
           >
-            <div className="max-w-3xl">
-              {/* Removed text-5xl md:text-7xl lg:text-8xl and leading-tight to use global h1 style */}
-              <h1 className="font-medium text-white mb-8"> 
+            <div className="max-w-4xl">
+              {/* Ensure headline always displays in exactly two lines */}
+              <h1 className="font-medium text-white mb-8 text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight max-w-[20ch]"> 
                 {formatTitle(slide.title)}
               </h1>
               <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 font-medium transition-colors">
-                {t.common.discoverMore}
+                {t("common.discoverMore")}
               </button>
             </div>
           </div>

@@ -12,6 +12,8 @@ import { locales } from "@/middleware"
 import CTASection from "@/components/cta-section"
 // Import the optimized Chatwoot component
 import OptimizedChatwoot from "@/components/optimized-chatwoot"
+import Script from "next/script"
+import Head from "next/head"
 
 // Import Plus Jakarta Sans with multiple weights
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -31,9 +33,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "UpperVisa | Expert Immigration & Visa Consulting Services",
+  title: "UpperVisa | Your American Dream Starts Here",
   description:
-    "UpperVisa provides professional immigration consulting, visa application assistance, and citizenship services with a 99% success rate. Get personalized guidance for your global journey.",
+    "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
   icons: {
     icon: [
       {
@@ -42,6 +44,31 @@ export const metadata: Metadata = {
       },
     ],
   },
+  openGraph: {
+    title: "UpperVisa | Your American Dream Starts Here",
+    description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
+    images: [
+      {
+        url: '/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UpperVisa Immigration Consulting',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "UpperVisa | Your American Dream Starts Here",
+    description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
+    images: ['/og.jpg'],
+  },
+  other: {
+    "link:preconnect:one.nexlink.ai": "https://one.nexlink.ai",
+    "link:preconnect:youtube": "https://www.youtube.com",
+    "link:dns-prefetch:youtube": "https://www.youtube.com"
+  }
 }
 
 // Add viewport configuration
@@ -65,11 +92,12 @@ export default function RootLayout({
   return (
     // Add Inter variable to className
     <html lang={locale} className={`${plusJakartaSans.variable} ${inter.variable}`}>
-      <body className="font-sans overflow-x-hidden">
-        {/* Add preconnect links using Script component */}
+      <head>
         <link rel="preconnect" href="https://one.nexlink.ai" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
+      </head>
+      <body className="font-sans overflow-x-hidden">
 
         {/* Wrap children with ClientProviders */}
         <ClientProviders locale={locale}>

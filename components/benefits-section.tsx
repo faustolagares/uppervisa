@@ -177,7 +177,7 @@ export default function BenefitsSection() {
                 </div>
                 <div>
                   <div className="text-3xl font-medium text-white">{counts.categories}+</div>
-                  <div className="text-white text-sm">{t("benefits.stats.categories")}</div>
+                  <div className="text-white text-sm">{t("benefits.statsSection.categories")}</div>
                 </div>
               </div>
 
@@ -221,7 +221,7 @@ export default function BenefitsSection() {
                 </div>
                 <div>
                   <div className="text-3xl font-medium text-white">{counts.process}k</div>
-                  <div className="text-white text-sm">{t("benefits.stats.process")}</div>
+                  <div className="text-white text-sm">{t("benefits.statsSection.process")}</div>
                 </div>
               </div>
 
@@ -240,7 +240,7 @@ export default function BenefitsSection() {
                 </div>
                 <div>
                   <div className="text-3xl font-medium text-white">{counts.success}+</div>
-                  <div className="text-white text-sm">{t("benefits.stats.success")}</div>
+                  <div className="text-white text-sm">{t("benefits.statsSection.success")}</div>
                 </div>
               </div>
 
@@ -280,7 +280,7 @@ export default function BenefitsSection() {
                 </div>
                 <div>
                   <div className="text-3xl font-medium text-white">{counts.consultants}+</div>
-                  <div className="text-white text-sm">{t("benefits.stats.consultants")}</div>
+                  <div className="text-white text-sm">{t("benefits.statsSection.consultants")}</div>
                 </div>
               </div>
             </div>

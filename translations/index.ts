@@ -36,13 +36,13 @@ const translations = {
     },
     hero: {
       slide1: {
-        title: "Your American Dream Starts Here",
+        title: "Your American<br>Dream Starts Here",
       },
       slide2: {
-        title: "Expert Guidance For Your Global Journey",
+        title: "Guidance For<br>Your Journey",
       },
       slide3: {
-        title: "Simplifying Immigration Since 2010",
+        title: "Simplifying Immigration<br>Since 2010",
       },
     },
     announcement: {
@@ -359,6 +359,29 @@ const translations = {
       contactUs: "Contact Us",
       bookConsultation: "Book Consultation",
     },
+    businessServices: {
+      pageTitle: "Business Services",
+      pageDescription: "Specialized immigration solutions for investors, entrepreneurs, and companies looking to establish or expand their presence in the United States.",
+      introTitle: "Our Business Immigration Services",
+      introParagraph1: "UpperVisa provides specialized immigration solutions for investors, entrepreneurs, and businesses looking to establish or expand their presence in the United States. Our team of experienced consultants understands the unique challenges and opportunities in business immigration.",
+      introParagraph2: "From investor visas to corporate transfers and business formation, we offer comprehensive services tailored to your business goals and immigration needs. Our strategic approach ensures compliance with U.S. immigration laws while maximizing your business opportunities.",
+      servicesInclude: "Our Services Include:",
+      explore: "Explore",
+      ctaTitle: "Ready to Grow Your Business in the U.S.?",
+      ctaDescription: "Contact our team today for a personalized consultation and expert guidance on business immigration options."
+    },
+    immigrationVisas: {
+      pageTitle: "Immigration & Visa Services",
+      pageDescription: "Expert guidance for all visa types, including immigrant visas, non-immigrant visas, permanent residency, and relocation services.",
+      breadcrumbTitle: "Immigration & Visas",
+      introTitle: "Our Immigration & Visa Services",
+      introParagraph1: "Navigating the U.S. immigration system can be complex and overwhelming. At UpperVisa, we provide expert guidance through every step of the visa application process, ensuring a smooth and successful experience. Our comprehensive immigration services are tailored to your specific needs and goals.",
+      introParagraph2: "Whether you're seeking permanent residency, a temporary visa, or assistance with relocation and settlement, our experienced team will develop a personalized strategy to maximize your chances of success.",
+      servicesInclude: "Our Services Include:",
+      explore: "Explore",
+      ctaTitle: "Ready to Start Your Immigration Journey?",
+      ctaDescription: "Contact our team today for a personalized consultation and expert guidance on your visa options."
+    },
     faqSection: { // Renamed from faq
       title: "Frequently Asked Questions",
       description: "Find answers to common questions about our immigration consultation services.",
@@ -435,13 +458,13 @@ const translations = {
     },
     hero: {
       slide1: {
-        title: "Seu Sonho Americano Começa Aqui",
+        title: "Seu Sonho<br>Americano Começa Aqui",
       },
       slide2: {
-        title: "Orientação Especializada Para Sua Jornada Global",
+        title: "Orientação<br>Para Sua Jornada",
       },
       slide3: {
-        title: "Simplificando Imigração Desde 2010",
+        title: "Simplificando Imigração<br>Desde 2010",
       },
     },
     announcement: {
@@ -761,6 +784,29 @@ const translations = {
       contactUs: "Fale Conosco",
       bookConsultation: "Agendar Consulta",
     },
+    businessServices: {
+      pageTitle: "Serviços Empresariais",
+      pageDescription: "Soluções de imigração especializadas para investidores, empreendedores e empresas que buscam estabelecer ou expandir sua presença nos Estados Unidos.",
+      introTitle: "Nossos Serviços de Imigração Empresarial",
+      introParagraph1: "A UpperVisa fornece soluções de imigração especializadas para investidores, empreendedores e empresas que buscam estabelecer ou expandir sua presença nos Estados Unidos. Nossa equipe de consultores experientes entende os desafios e oportunidades únicos na imigração empresarial.",
+      introParagraph2: "De vistos de investidor a transferências corporativas e formação de empresas, oferecemos serviços abrangentes adaptados aos seus objetivos de negócios e necessidades de imigração. Nossa abordagem estratégica garante conformidade com as leis de imigração dos EUA enquanto maximiza suas oportunidades de negócios.",
+      servicesInclude: "Nossos Serviços Incluem:",
+      explore: "Explorar",
+      ctaTitle: "Pronto para Expandir seu Negócio nos EUA?",
+      ctaDescription: "Entre em contato com nossa equipe hoje para uma consulta personalizada e orientação especializada sobre opções de imigração empresarial."
+    },
+    immigrationVisas: {
+      pageTitle: "Serviços de Imigração e Vistos",
+      pageDescription: "Orientação especializada para todos os tipos de vistos, incluindo vistos de imigrante, vistos de não-imigrante, residência permanente e serviços de relocação.",
+      breadcrumbTitle: "Imigração e Vistos",
+      introTitle: "Nossos Serviços de Imigração e Vistos",
+      introParagraph1: "Navegar pelo sistema de imigração dos EUA pode ser complexo e avassalador. Na UpperVisa, fornecemos orientação especializada em cada etapa do processo de solicitação de visto, garantindo uma experiência tranquila e bem-sucedida. Nossos serviços abrangentes de imigração são adaptados às suas necessidades e objetivos específicos.",
+      introParagraph2: "Seja você esteja buscando residência permanente, um visto temporário ou assistência com relocação e estabelecimento, nossa equipe experiente desenvolverá uma estratégia personalizada para maximizar suas chances de sucesso.",
+      servicesInclude: "Nossos Serviços Incluem:",
+      explore: "Explorar",
+      ctaTitle: "Pronto para Iniciar sua Jornada de Imigração?",
+      ctaDescription: "Entre em contato com nossa equipe hoje para uma consulta personalizada e orientação especializada sobre suas opções de visto."
+    },
     faqSection: { // Renamed from faq, Placeholder translations
       title: "Perguntas Frequentes",
       description: "Encontre respostas para perguntas comuns sobre nossos serviços de consultoria de imigração.",
@@ -837,13 +883,13 @@ const translations = {
     },
     hero: {
       slide1: {
-        title: "Tu Sueño Americano Comienza Aquí",
+        title: "Tu Sueño<br>Americano Comienza Aquí",
       },
       slide2: {
-        title: "Guía Experta Para Tu Viaje Global",
+        title: "Guía Para<br>Tu Viaje",
       },
       slide3: {
-        title: "Simplificando la Inmigración Desde 2010",
+        title: "Simplificando la Inmigración<br>Desde 2010",
       },
     },
     announcement: {
@@ -1161,6 +1207,29 @@ const translations = {
         "Dé el primer paso hacia su nueva vida en los Estados Unidos. Nuestros consultores expertos están listos para guiarlo en cada paso del proceso de visa e inmigración.",
       contactUs: "Contáctenos",
       bookConsultation: "Reservar Consulta",
+    },
+    businessServices: {
+      pageTitle: "Servicios Empresariales",
+      pageDescription: "Soluciones de inmigración especializadas para inversionistas, emprendedores y empresas que buscan establecer o expandir su presencia en los Estados Unidos.",
+      introTitle: "Nuestros Servicios de Inmigración Empresarial",
+      introParagraph1: "UpperVisa proporciona soluciones de inmigración especializadas para inversionistas, emprendedores y empresas que buscan establecer o expandir su presencia en los Estados Unidos. Nuestro equipo de consultores experimentados comprende los desafíos y oportunidades únicos en la inmigración empresarial.",
+      introParagraph2: "Desde visas de inversionista hasta transferencias corporativas y formación de empresas, ofrecemos servicios integrales adaptados a sus objetivos comerciales y necesidades de inmigración. Nuestro enfoque estratégico garantiza el cumplimiento de las leyes de inmigración de EE.UU. mientras maximiza sus oportunidades de negocio.",
+      servicesInclude: "Nuestros Servicios Incluyen:",
+      explore: "Explorar",
+      ctaTitle: "¿Listo para Hacer Crecer su Negocio en EE.UU.?",
+      ctaDescription: "Contacte a nuestro equipo hoy para una consulta personalizada y orientación experta sobre opciones de inmigración empresarial."
+    },
+    immigrationVisas: {
+      pageTitle: "Servicios de Inmigración y Visas",
+      pageDescription: "Orientación experta para todo tipo de visas, incluyendo visas de inmigrante, visas de no inmigrante, residencia permanente y servicios de reubicación.",
+      breadcrumbTitle: "Inmigración y Visas",
+      introTitle: "Nuestros Servicios de Inmigración y Visas",
+      introParagraph1: "Navegar por el sistema de inmigración de EE.UU. puede ser complejo y abrumador. En UpperVisa, proporcionamos orientación experta en cada paso del proceso de solicitud de visa, asegurando una experiencia fluida y exitosa. Nuestros servicios integrales de inmigración están adaptados a sus necesidades y objetivos específicos.",
+      introParagraph2: "Ya sea que esté buscando residencia permanente, una visa temporal o asistencia con reubicación y establecimiento, nuestro experimentado equipo desarrollará una estrategia personalizada para maximizar sus posibilidades de éxito.",
+      servicesInclude: "Nuestros Servicios Incluyen:",
+      explore: "Explorar",
+      ctaTitle: "¿Listo para Comenzar su Proceso de Inmigración?",
+      ctaDescription: "Contacte a nuestro equipo hoy para una consulta personalizada y orientación experta sobre sus opciones de visa."
     },
     faqSection: { // Renamed from faq, Placeholder translations
       title: "Preguntas Frecuentes",
