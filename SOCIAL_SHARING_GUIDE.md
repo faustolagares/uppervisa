@@ -28,16 +28,39 @@ We've made several improvements to ensure that the UpperVisa logo and informatio
 
 ## How to Test
 
+### Testing Locally
+
+We've created a test script that will help you test the social media sharing functionality locally:
+
+```bash
+# Make the script executable (if not already)
+chmod +x test-social-sharing.sh
+
+# Run the test script
+./test-social-sharing.sh
+```
+
+This script will:
+1. Check if the Next.js development server is running and start it if needed
+2. Open the test page in your default browser
+3. Open the WhatsApp preview page in your default browser
+4. Provide instructions for testing social media sharing
+
+### Testing in Production
+
 1. Deploy the website to your production environment (https://uppervisa.com)
 2. Visit `/test-social-sharing.html` on your website
 3. Use the social sharing buttons to share the website on different platforms
 4. Verify that the UpperVisa logo and information appear correctly in the preview
 
-You can also use these tools to debug social media sharing:
+### Debugging Tools
+
+You can use these tools to debug social media sharing:
 
 - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 - [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 - [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
+- [WhatsApp Link Preview Tester](https://www.opengraph.xyz/)
 
 ## Troubleshooting
 
