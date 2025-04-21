@@ -23,37 +23,27 @@ export default function OptimizedChatwoot() {
   if (!isClient) return null
 
   return (
-    <>
-      <Script
-        id="chatwoot-settings"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.chatwootSettings = {
-              hideMessageBubble: false,
-              position: "right",
-              locale: "pt-BR",
-              type: "standard",
-              launcherTitle: "Chat com a gente",
-            };
-          `,
-        }}
-      />
-      <Script
-        id="chatwoot-sdk"
-        src="https://one.nexlink.ai/packs/js/sdk.js"
-        strategy="lazyOnload"
-        onLoad={() => {
-          try {
-            window.chatwootSDK.run({
-              websiteToken: "s7rELz3R7WWrvjwW8XNmyY6P",
-              baseUrl: "https://one.nexlink.ai",
-            });
-          } catch (e) {
-            console.error("Chatwoot initialization error:", e);
-          }
-        }}
-      />
-    </>
+    <Script
+      id="chatwoot-widget"
+      strategy="lazyOnload"
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function(d,t) {
+            var BASE_URL="https://one.nexlink.ai";
+            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=BASE_URL+"/packs/js/sdk.js";
+            g.defer = true;
+            g.async = true;
+            s.parentNode.insertBefore(g,s);
+            g.onload=function(){
+              window.chatwootSDK.run({
+                websiteToken: 's7rELz3R7WWrvjwW8XNmyY6P',
+                baseUrl: BASE_URL
+              })
+            }
+          })(document,"script");
+        `,
+      }}
+    />
   )
 }
