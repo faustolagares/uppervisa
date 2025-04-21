@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google"; // Import Inter
 // import { LanguageProvider } from "@/components/language-provider";
 import { ClientProviders } from "@/components/client-providers"; // Re-import ClientProviders
+import { Analytics } from "@vercel/analytics/react";
 import SiteHeader from "@/components/site-header";
 import AnnouncementBar from "@/components/announcement-bar";
 import SiteFooter from "@/components/site-footer"
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
   title: "UpperVisa | Your American Dream Starts Here",
   description:
     "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
+  metadataBase: new URL('https://uppervisa.com'),
   icons: {
     icon: [
       {
@@ -57,17 +59,26 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
+    siteName: 'UpperVisa',
   },
   twitter: {
     card: 'summary_large_image',
     title: "UpperVisa | Your American Dream Starts Here",
     description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
     images: ['/og.jpg'],
+    site: '@uppervisa',
   },
   other: {
     "link:preconnect:one.nexlink.ai": "https://one.nexlink.ai",
     "link:preconnect:youtube": "https://www.youtube.com",
-    "link:dns-prefetch:youtube": "https://www.youtube.com"
+    "link:dns-prefetch:youtube": "https://www.youtube.com",
+    'og:image': 'https://uppervisa.com/og.jpg',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:image:alt': 'UpperVisa Immigration Consulting',
+    'og:image:type': 'image/jpeg',
+    'og:url': 'https://uppervisa.com',
+    'og:site_name': 'UpperVisa',
   }
 }
 
@@ -112,6 +123,7 @@ export default function RootLayout({
         </ClientProviders>
         {/* Restore Chatwoot (or keep commented if still debugging separately) */}
         <OptimizedChatwoot /> {/* Restore Chatwoot */}
+        <Analytics />
       </body>
     </html>
   )

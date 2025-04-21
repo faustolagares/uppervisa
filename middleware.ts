@@ -20,6 +20,18 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  const userAgent = request.headers.get('user-agent') || ''
+  
+  // Check if the request is from WhatsApp or other social media platforms
+  const socialMediaCrawlers = ['whatsapp', 'facebook', 'instagram', 'telegram']
+  const isSocialMediaCrawler = socialMediaCrawlers.some(crawler => 
+    userAgent.toLowerCase().includes(crawler)
+  )
+  
+  // If the request is from a social media crawler and it's the root path, redirect to the preview page
+  if (isSocialMediaCrawler && (pathname === '/' || pathname === '/en-US' || pathname === '/pt-BR' || pathname === '/es-MX')) {
+    return NextResponse.rewrite(new URL('/whatsapp-preview.html', request.url))
+  }
 
   // Check if the pathname is missing a locale
   const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
@@ -42,5 +54,8 @@ export const config = {
   // - Static files (e.g. images, fonts, etc.)
   // - _next (Next.js internal routes)
   // - usa-map.json (our GeoJSON file)
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|images|usa-map.json|.*\\..*).*)"],
+  // But include whatsapp-preview.html
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|images|usa-map.json|test-social-sharing.html|.*\\..*).*)|(whatsapp-preview.html)"
+  ],
 }

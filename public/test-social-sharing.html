@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Social Sharing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            background-color: #ff3333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #e62e2e;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .social-button {
+            padding: 10px 15px;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .whatsapp {
+            background-color: #25D366;
+        }
+        .facebook {
+            background-color: #1877F2;
+        }
+        .twitter {
+            background-color: #1DA1F2;
+        }
+        .telegram {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>UpperVisa Social Sharing Test</h1>
+    
+    <div class="card">
+        <h2>Share UpperVisa Website</h2>
+        <p>Use the buttons below to share the UpperVisa website on different social media platforms. This will help test if the Open Graph meta tags are working correctly.</p>
+        
+        <div class="social-buttons">
+            <a href="https://api.whatsapp.com/send?text=Check%20out%20UpperVisa%20for%20expert%20immigration%20services%3A%20https%3A%2F%2Fuppervisa.com" target="_blank" class="social-button whatsapp">
+                Share on WhatsApp
+            </a>
+            
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuppervisa.com" target="_blank" class="social-button facebook">
+                Share on Facebook
+            </a>
+            
+            <a href="https://twitter.com/intent/tweet?text=Check%20out%20UpperVisa%20for%20expert%20immigration%20services%3A%20https%3A%2F%2Fuppervisa.com" target="_blank" class="social-button twitter">
+                Share on Twitter
+            </a>
+            
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fuppervisa.com&text=Check%20out%20UpperVisa%20for%20expert%20immigration%20services" target="_blank" class="social-button telegram">
+                Share on Telegram
+            </a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>What We've Implemented</h2>
+        <p>We've made several improvements to ensure that the UpperVisa logo and information appear correctly when shared on social media platforms:</p>
+        
+        <ol>
+            <li>Added comprehensive Open Graph meta tags in both layout files</li>
+            <li>Created a dedicated WhatsApp preview page with optimized meta tags</li>
+            <li>Updated the middleware to detect social media crawlers and redirect them to the preview page</li>
+            <li>Added a robots.txt file to ensure social media crawlers can access the preview page</li>
+            <li>Implemented absolute URLs for all image references</li>
+        </ol>
+        
+        <p>These changes should ensure that when someone shares the UpperVisa website link on WhatsApp, Facebook, Twitter, or other social media platforms, they'll see the UpperVisa logo and information in the preview.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Technical Details</h2>
+        <p>Here are the key files we've modified or created:</p>
+        
+        <ul>
+            <li><strong>app/layout.tsx</strong> - Updated Open Graph meta tags</li>
+            <li><strong>app/[locale]/layout.tsx</strong> - Updated Open Graph meta tags</li>
+            <li><strong>public/whatsapp-preview.html</strong> - Created dedicated preview page for social media</li>
+            <li><strong>middleware.ts</strong> - Added social media crawler detection and redirection</li>
+            <li><strong>public/robots.txt</strong> - Added rules for social media crawlers</li>
+            <li><strong>app/page.tsx</strong> - Added client-side detection for social media crawlers</li>
+        </ul>
+        
+        <p>If you encounter any issues with social media sharing, please check the following:</p>
+        
+        <ol>
+            <li>Ensure that the website is deployed and accessible at https://uppervisa.com</li>
+            <li>Use the <a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Sharing Debugger</a> to check how Facebook sees your website</li>
+            <li>Use the <a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a> to check how Twitter sees your website</li>
+            <li>Clear the cache on your social media apps if you don't see the updated preview</li>
+        </ol>
+    </div>
+    
+    <a href="/" class="button">Back to Homepage</a>
+</body>
+</html>

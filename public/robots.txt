@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Allow social media crawlers to access the WhatsApp preview page
+User-agent: WhatsApp
+Allow: /whatsapp-preview.html
+
+User-agent: facebookexternalhit
+Allow: /whatsapp-preview.html
+
+User-agent: Facebot
+Allow: /whatsapp-preview.html
+
+User-agent: Twitterbot
+Allow: /whatsapp-preview.html
+
+User-agent: LinkedInBot
+Allow: /whatsapp-preview.html
+
+User-agent: Telegrambot
+Allow: /whatsapp-preview.html
+
+User-agent: InstagramBot
+Allow: /whatsapp-preview.html
+
+# Sitemap
+Sitemap: https://uppervisa.com/sitemap.xml

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   title: "UpperVisa | Your American Dream Starts Here",
   description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
   generator: 'v0.dev',
+  metadataBase: new URL('https://uppervisa.com'),
   openGraph: {
     title: "UpperVisa | Your American Dream Starts Here",
     description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
@@ -35,12 +36,23 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
+    siteName: 'UpperVisa',
   },
   twitter: {
     card: 'summary_large_image',
     title: "UpperVisa | Your American Dream Starts Here",
     description: "Expert immigration and visa consulting services to help you navigate the path to your American dream. Get personalized guidance for all visa types, immigration processes, and relocation services.",
     images: ['/og.jpg'],
+    site: '@uppervisa',
+  },
+  other: {
+    'og:image': 'https://uppervisa.com/og.jpg',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:image:alt': 'UpperVisa Immigration Consulting',
+    'og:image:type': 'image/jpeg',
+    'og:url': 'https://uppervisa.com',
+    'og:site_name': 'UpperVisa',
   }
 }
 

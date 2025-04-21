@@ -2,8 +2,35 @@ import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Mail, Clock, Search, Volume2, Facebook, Twitter, Instagram, ChevronDown } from "lucide-react"
 // Removed unused import: import HeroSlideshow from "@/components/hero-slideshow"
+import { redirect } from 'next/navigation'
+
+// Create a server action to check user agent
+function checkUserAgent() {
+  try {
+    // This is a workaround for the headers() function in Next.js
+    const userAgent = typeof window === 'undefined' ? 
+      (process.env.USER_AGENT || '') : 
+      window.navigator.userAgent;
+    
+    // List of social media crawler user agents to check for
+    const socialMediaCrawlers = ['whatsapp', 'facebook', 'instagram', 'telegram'];
+    
+    // Check if the user agent includes any of the social media crawler identifiers
+    return socialMediaCrawlers.some(crawler => 
+      userAgent.toLowerCase().includes(crawler)
+    );
+  } catch (error) {
+    console.error('Error checking user agent:', error);
+    return false;
+  }
+}
 
 export default function Home() {
+  // If the request is from a social media crawler, redirect to the preview page
+  if (checkUserAgent()) {
+    return redirect('/whatsapp-preview.html');
+  }
+  
   return (
     <div className="flex flex-col min-h-screen">
       {/* Top Info Bar */}
